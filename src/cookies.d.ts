@@ -7,7 +7,7 @@
  * Licensed under the MIT license,
  * http://www.opensource.org/licenses/MIT
  */
- 
+
 interface CookieOptions {
     path: string;
     domain: string;
@@ -17,11 +17,12 @@ interface CookieOptions {
 
 interface CookiesStatic {
     (key: string, value?: any, options?: CookieOptions): any;
-    
+
     get(key: string): string;
+    pop(key: string, options?: CookieOptions): string;
     set(key: string, value: any, options?: CookieOptions): CookiesStatic;
     expire(key: string, options?: CookieOptions): CookiesStatic;
-    
+
     defaults: CookieOptions;
     enabled: bool;
 }

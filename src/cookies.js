@@ -30,6 +30,13 @@
         return Cookies._cache[key];
     };
 
+    Cookies.pop = function (key, options){
+        var _value = Cookies.get(key);
+        Cookies.set(key, undefined, options);
+
+        return _value;
+    }
+
     Cookies.set = function (key, value, options) {
         options = Cookies._getExtendedOptions(options);
         options.expires = Cookies._getExpiresDate(value === undefined ? -1 : options.expires);

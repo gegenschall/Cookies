@@ -100,6 +100,14 @@ The string value of the cookie.
     // Using the alias
     Cookies('key'); // "value"
     
+### Cookies.pop(key [,options])
+
+Retrieves the cookie value of the most locally scoped cookie with the specfied key and deletes it afterwards.
+
+#### Arguments:
+*key*: A string value of a cookie key
+*options*: An object containing addtional parameters about the cookie (discussed below)
+
 ### Cookies.expire(key [, options])
 *Alias: Cookies(key, `undefined` [, options])*
 
